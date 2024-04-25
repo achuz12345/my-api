@@ -1,15 +1,14 @@
+# serializers.py
+
 from rest_framework import serializers
-from .models import Location, Item
-
-
-class ItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Item
-        fields = ('__all__')
-
+from .models import Location, Experience
 
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
-        fields = ('__all__')
+        fields = '__all__'
 
+class ExperienceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Experience
+        fields = '__all__'

@@ -1,9 +1,11 @@
+# urls.py
+
 from django.urls import path
-from .views import ItemList, ItemDetail, LocationDetail, LocationList
+from .views import LocationList, LocationDetail, ExperienceList, ExperienceDetail
 
 urlpatterns = [
-    path('location/', LocationList.as_view()),
-    path('location/<int:pk>/', LocationDetail.as_view()),
-    path('item/', ItemList.as_view()),
-    path('item/<int:pk>/', ItemDetail.as_view()),
+    path('locations/', LocationList.as_view(), name='location-list'),
+    path('locations/<int:pk>/', LocationDetail.as_view(), name='location-detail'),
+    path('experiences/', ExperienceList.as_view(), name='experience-list'),
+    path('experiences/<int:pk>/', ExperienceDetail.as_view(), name='experience-detail'),
 ]
